@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
+import DarkModeSwitch from './DarkModeSwitch';
+import { ThemeProvider } from 'next-themes';
 
 export default function Header() {
   return (
@@ -11,7 +13,9 @@ export default function Header() {
         <Link href="/" className="text-2xl font-bold hover:text-blue-300">
           Movie APP
         </Link>
-
+        <div className='flex items-end gap-4 '>
+          <DarkModeSwitch />
+        </div>
         <div className="space-x-4">
           <Link href="/" className="hover:text-blue-300">
             Accueil
@@ -24,9 +28,7 @@ export default function Header() {
           </Link>
         </div>
       </div>
-               
-            
-            </nav>
+           </nav>
         </header>
     </div>
   )
