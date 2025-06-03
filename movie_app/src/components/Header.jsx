@@ -20,9 +20,7 @@ export default function Header() {
           <Link href="/" className="hover:text-blue-300">
             Accueil
           </Link>
-          <Link href="/film" className="hover:text-blue-300">
-            Films
-          </Link>
+          
           <Link href="/apropos" className="hover:text-blue-300">
             À propos
           </Link>
