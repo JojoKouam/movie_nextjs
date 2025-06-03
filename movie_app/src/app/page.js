@@ -1,8 +1,9 @@
 import AffichageFilm from "@/components/AffichageFilm";
 import React from 'react';
-export default async function Home({ searchParams }) {
-    const API_KEY = process.env.TMDB_API_KEY; // Récupérez la clé API
 
+const API_KEY = process.env.TMDB_API_KEY; // Récupérez la clé API
+export default async function Home({ searchParams }) {
+    
     // Vérifiez si la clé API est bien chargée
     if (!API_KEY) {
         console.error("TMDB_API_KEY is not defined in .env.local");
@@ -15,6 +16,7 @@ export default async function Home({ searchParams }) {
     const url = genre === "fetchTendances"
         ? `https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=fr-FR`
         : `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=fr-FR`;
+        
         // Note: Si 'genre' est autre chose que "fetchTendances", vous allez chercher "top_rated".
         // Si vous vouliez utiliser 'genre' pour filtrer par un genre spécifique,
         // l'URL devrait être différente, par exemple :

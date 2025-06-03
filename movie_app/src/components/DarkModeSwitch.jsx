@@ -8,7 +8,7 @@ export default function DarkModeSwitch() {
     const currentTheme = theme === 'system' ? systemTheme : theme;
   return (
     <div>
-        {currentTheme === 'dark' ? <MdLightMode onClick={()=>setTheme("light")} className='text-xl cursor-pointer hover:text-amber-500' /> : <MdDarkMode onClick={()=>setTheme("dark")} className='text-xl cursor-pointer hover:text-amber-500'/>}
+        {currentTheme === 'dark' ?<MdLightMode onClick={()=>setTheme("light")} className='text-xl cursor-pointer hover:text-amber-500' /> : <MdDarkMode onClick={()=>setTheme("dark")} className='text-xl cursor-pointer hover:text-amber-500'/>}
     </div>
   )
 }
