@@ -21,9 +21,6 @@ export default function page() {
       <p className="text-lg">
         Développé par Josée Kouamé 
       </p>
-      <p className="text-lg">
-        Version: 1.0.0
-      </p>
       </div>
   )
 }
